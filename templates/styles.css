@@ -21,6 +21,10 @@ li a{
     text-decoration: none;
     font-weight: bold;
 }
+.navlink:hover{
+    color: green;
+}
+
 form{
     margin:5px;
     
@@ -45,3 +49,5 @@ table{
 p{
     margin:5px; 
 }
+
+

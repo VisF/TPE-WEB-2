@@ -1,6 +1,6 @@
 {include file="templates/header.tpl"}
 <div class="pagina">
-{if $email neq "invitado"}
+{if $user[1] neq '0'}
 <form id="agregar" method="POST"action="agregarProducto">
     <div class="formulario">
         <label for="nombre">Ingrese el nombre: </label><input type="text" name="nombre"/>
@@ -10,7 +10,7 @@
                 <option value="{$fabricante->id_fabricante}">{$fabricante->descripcion}</option>
             {/foreach}
         </select>
-        <button type="submit" class="agregar">Agregar</button>
+        <button type="submit">Agregar</button>
     </div>
 </form>
 {/if}

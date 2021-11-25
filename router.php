@@ -23,9 +23,24 @@ switch ($params[0]){
     case 'login':
         $userControllers->showLogin();
         break;   
+    case 'registrar':
+        $userControllers->registrarUsuario();
+        break;
+    case 'form':
+        $userControllers->formularioRegistro();
+        break;
     case 'verificar':
         $userControllers->verificar();
-        break;    
+        break; 
+    case 'admin':
+        $userControllers->controlAdmin();
+        break;
+    case 'modif':
+        $userControllers->administrarRoles();
+        break;
+    case 'borrar': 
+        $userControllers->eliminarUsuario();
+        break;   
     case 'logout':
         $userControllers->logout();
         break;               

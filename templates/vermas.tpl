@@ -9,8 +9,7 @@
 <a href="fabricantes/{$producto->id_fabricante}">Ver fabricante</a>
 
 
-
-{if $email neq 'invitado'}
+{if $user[1] neq '0'}
 <form id="editar" method="POST" action="productos/{$producto->id_producto}/editar">
     <label for="nombre">Ingrese el nombre: </label><input type="text" value="{$producto->nombre}" name="nombre"/>
     <label for="precio">Ingrese el precio: </label><input type="number" value="{$producto->precio}" name="precio"/>
@@ -27,4 +26,17 @@
 
 
 {/if}
+{if $user[0] neq 'invitado'}
+        <form id="agregarComent">
+            <h3>Deje su comentario</h3>
+            <label for="contenido">Comentario: </label><input type="text" id="contenido" name="contenido"/>
+            <label for="puntuacion">Calificacion: </label><input type="number" id="puntuacion" name="puntuacion"/>
+            <button type="submit">Enviar</button>
+        </form>
+    {/if}
+<div class="comentarios">
+    
+</div>
+
+<script src="templates/apicomentarios.js"></script>
 {include file="templates/footer.tpl"}

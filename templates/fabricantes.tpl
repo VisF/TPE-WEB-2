@@ -1,6 +1,6 @@
 {include file="templates/header.tpl"}
 <div class="pagina">
-{if $email neq 'invitado'}
+{if $user[1] neq '0'}
 <form id="agregar" method="POST"action="agregarFabricante">
     <div class="formulario">
         <label for="descripcion">Ingrese la descripcion: </label><input type="text" name="descripcion"/>

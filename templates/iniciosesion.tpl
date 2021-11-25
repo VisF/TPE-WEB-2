@@ -5,5 +5,6 @@
         <label for="pass">Contraseña: </label><input type="password" name="pass" value="12345">
         <button class="iniciarsesion">Entrar</button>
     </form>
+    <li><a href="form"><button class="registrarse">Registrarse</button></a></li>
     
 {include file="templates/footer.tpl"}

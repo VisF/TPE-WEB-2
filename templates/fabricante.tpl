@@ -7,7 +7,7 @@
 
 
 
-{if $email neq 'invitado'}
+{if $user[1] neq '0'}
 <form id="editar" method = "POST" action = "fabricantes/{$fabricante->id_fabricante}/editar">
     <label for="descripcion">Ingrese la descripcion: </label><input type="text" value="{$fabricante->descripcion}" name="descripcion"/>
     <label for="pais">Ingrese el pais: </label><input type="text" value="{$fabricante->pais}" name="pais"/>

@@ -39,10 +39,18 @@ CREATE TABLE `producto` (
   `id_fabricante` int NOT NULL 
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+CREATE TABLE `comentario` (
+  `id_comentario` int(11) NOT NULL,
+  `contenido` varchar(200) NOT NULL,
+  `calificacion` int(11) NOT NULL,
+  `id_producto` int NOT NULL 
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
 CREATE TABLE `usuario` (
   `id_usuario` bigint UNSIGNED NOT NULL,
   `email` varchar(200) NOT NULL,
-  `pass` varchar(200) NOT NULL
+  `pass` varchar(200) NOT NULL,
+  `admin` tinyint(4) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -59,9 +67,9 @@ INSERT INTO `producto` (`id_producto`, `nombre`, `precio`, `id_fabricante`) VALU
 (2, 'Mayonesa 1000gr', 250, 2),
 (3, 'Cuaderno 80 hojas rayadas', 100, 3);
 
-INSERT INTO `usuario` (`id_usuario`, `email`, `pass`) VALUES
-(1, 'admin@admin.com', '$2y$10$wFO3LGHuNpv6RPKPXASmI..fgim4JtaD2IfUYSbadkHRWrtlRF./m');
-
+INSERT INTO `usuario` (`id_usuario`, `email`, `pass`, `admin`) VALUES
+(1, 'admin@admin.com', '$2y$10$wFO3LGHuNpv6RPKPXASmI..fgim4JtaD2IfUYSbadkHRWrtlRF./m', '1'),
+(2, 'user@user.com', '$2y$10$wFO3LGHuNpv6RPKPXASmI..fgim4JtaD2IfUYSbadkHRWrtlRF./m', '0');
 
 --
 -- Índices para tablas volcadas
@@ -70,6 +78,10 @@ INSERT INTO `usuario` (`id_usuario`, `email`, `pass`) VALUES
 ALTER TABLE `producto`
   ADD PRIMARY KEY (`id_producto`),
   ADD UNIQUE KEY `id_producto` (`id_producto`);
+
+ALTER TABLE `comentario`
+  ADD PRIMARY KEY (`id_comentario`),
+  ADD UNIQUE KEY `id_comentario` (`id_comentario`);
 
 ALTER TABLE `fabricante`
   ADD PRIMARY KEY (`id_fabricante`),
@@ -90,6 +102,9 @@ ALTER TABLE `usuario`
 ALTER TABLE `producto`
   MODIFY `id_producto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
 
+ALTER TABLE `comentario`
+  MODIFY `id_comentario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+
 ALTER TABLE `usuario`
   MODIFY `id_usuario` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
@@ -98,6 +113,9 @@ ALTER TABLE `fabricante`
 
 ALTER TABLE `producto`
   ADD CONSTRAINT `producto_idfk1` FOREIGN KEY (`id_fabricante`) REFERENCES `fabricante` (`id_fabricante`);
+
+ALTER TABLE `comentario`
+  ADD CONSTRAINT `comentario_idfk1` FOREIGN KEY (`id_producto`) REFERENCES `producto` (`id_producto`);
 
   COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
