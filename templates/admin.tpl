@@ -2,14 +2,19 @@
     {foreach from=$usuarios item=$usuario}
     <div>
         <form action='modif' method='POST'>
-            <input type='text' name='mail' value='{$usuario->email}' readonly/>
-            <p>Admin: {$usuario->admin}</p>
-            <button type="submit" class="rol">Cambiar rol</button>
+            <div class="userpage">
+                <p>Mail del usuario</p>
+                <input type='text' name='mail' value='{$usuario->email}' readonly/>
+                <p>Admin: {$usuario->admin}</p>
+                <button type="submit" class="botonusuarios">Cambiar rol</button>
+            </div>
         </form>
         <form action='borrar' method='POST'>
-            <p>Id del usuario</p>
-            <input type='text' name='id_user' value='{$usuario->id_usuario}' readonly/>
-            <button type="submit">Borrar usuario</button>
+            <div class="userpage">
+                <p>Id del usuario</p>
+                <input class="inputid"type='text' name='id_user' value='{$usuario->id_usuario}' readonly/>
+                <button type="submit" class="botonusuarios">Borrar usuario</button>
+            </div>
         </form>
     </div>
 

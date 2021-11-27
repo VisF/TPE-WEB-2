@@ -1,6 +1,6 @@
 </div>
     <footer>
-        <h1>Pagina en proceso</h1>
+        <h3>Para mas informacion comunicarse al instragram</h3>
     </footer>
 
 </body>

@@ -16,16 +16,16 @@
     <header>
         <nav>
             <ul class="menu">
-                <li><a class="navlink" href="productos">Productos</a></li>
-                <li><a href="fabricantes">Fabricantes</a></li>
+                <li><a class="botheader" href="productos">Productos</a></li>
+                <li><a class="botheader" href="fabricantes">Fabricantes</a></li>
                 <li><p>Bienvenido/s <p>{$user[0]}</li>
                 {if $user[0] neq 'invitado'}
-                    <li><a href="logout"><button class="logout">Logout</button></a></li>
+                    <li><a href="logout"><button class="botheader">Logout</button></a></li>
                 {else}
-                    <li><a href="login"><button class="login">Iniciar Sesion</button></a></li>
+                    <li><a href="login"><button class="botheader">Iniciar Sesion</button></a></li>
                 {/if}
                 {if $user[1] neq '0'}
-                    <li><a href="admin"><button class="admin">Ver usuarios</button></a></li>
+                    <li><a href="admin"><button class="botheader">Ver usuarios</button></a></li>
                 {/if}
                 
             </ul>

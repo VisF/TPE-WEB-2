@@ -22,16 +22,16 @@
     </select>
     <button type="submit" class="editar">Editar</button>
 </form>
-    <a href="productos/{$producto->id_producto}/borrar"><button class="borrar">Borrar</button></a>
+    <a href="productos/{$producto->id_producto}/borrar"><button class="borrar">Borrar producto</button></a>
 
 
 {/if}
 {if $user[0] neq 'invitado'}
+    <h3 class="titulocoment">Deje su comentario</h3>
         <form id="agregarComent">
-            <h3>Deje su comentario</h3>
             <label for="contenido">Comentario: </label><input type="text" id="contenido" name="contenido"/>
             <label for="puntuacion">Calificacion: </label><input type="number" id="puntuacion" name="puntuacion"/>
-            <button type="submit">Enviar</button>
+            <button type="submit" class="enviar">Enviar</button>
         </form>
     {/if}
 <div class="comentarios">

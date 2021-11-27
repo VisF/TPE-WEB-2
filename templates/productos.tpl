@@ -5,12 +5,13 @@
     <div class="formulario">
         <label for="nombre">Ingrese el nombre: </label><input type="text" name="nombre"/>
         <label for="precio">Ingrese el precio: </label><input type="number" name="precio"/>
+        <p>Fabricante</p>
         <select name="fabricante">
             {foreach $fabricantes as $fabricante}
                 <option value="{$fabricante->id_fabricante}">{$fabricante->descripcion}</option>
             {/foreach}
         </select>
-        <button type="submit">Agregar</button>
+        <button type="submit" class="botheader">Agregar</button>
     </div>
 </form>
 {/if}
@@ -28,7 +29,7 @@
                 <tr class="productos">
                     <td> {$producto->nombre}</td>
                     <td> {$producto->descripcion} </td>
-                    <td> <a href="productos/{$producto->id_producto}"><button class="vermas">Ver mas</button> </a></td>
+                    <td> <a href="productos/{$producto->id_producto}"><button class="botheader">Ver mas</button> </a></td>
                     
                 </tr>
         {/foreach}

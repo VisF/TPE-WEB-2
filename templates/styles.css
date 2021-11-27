@@ -1,3 +1,13 @@
+body{
+    margin: 0px;
+    border:none;
+    padding: 0%;
+    background-color:white;
+    background-image: url(fondo.jpg);
+    background-size: cover;
+}
+
+
 .menu{
     display: flex;
     margin: 0%;
@@ -7,22 +17,36 @@
     
 }
 nav{
-    background-color: red;
-    margin: 5px;
-    
+    background-color: yellow;
+    margin: 0px;
+    padding: 0%;
+    border-bottom: black;
+    border-width: 2px;
+
 }
 li{
     list-style: none;
     text-decoration: none;
     font-weight: bold;
+    text-align: center;
 }
 li a{
     color: black;    
     text-decoration: none;
     font-weight: bold;
+
 }
-.navlink:hover{
-    color: green;
+
+.botheader{
+    margin-top: 15px;
+    vertical-align: middle;
+    
+}
+.botheader:hover{
+    color: white;
+    height: 28px;
+    
+    
 }
 
 form{
@@ -33,21 +57,104 @@ form{
 .formulario{
     justify-content: space-around;
     display: flex;
-    border: black;
+    
+}
+input, select{
+    height: 60%;
 }
 footer{
     text-align:center;
+
 }
 table{
-    background-color: coral;
+    background-color: white;
+    width: 98%;
+    margin-left: 1%;
+
 }
-.producto, .fabricante {
+.producto {
     display:flex;
     margin:5px;
+    background-color: white;
+    width: 37%;
 }
 
 p{
     margin:5px; 
 }
 
+thead, td, tr{
+    text-align: left;
+    border: solid black;
+    border-collapse: collapse;
+    border-width: 1px;
+    
+}
 
+button{
+    text-align: center;
+    margin-left: 40%;
+}
+
+.fabricante{
+    background-color: white;
+    width: 40%;
+    
+}
+.formfabri{
+    width: 80%;
+    display:flex;
+}
+.buttonfabri{
+    margin-left: 2px;
+    height: 100%;
+}
+#agregarComent, .titulocoment{
+    display:flex;
+    justify-content: center;
+}
+button, .enviar{
+    margin-left:5px;
+    height: 70%;
+}
+.vermas:hover{
+    color: blue;
+}
+#iniciar{
+    display: flex;
+    justify-content: center;
+    margin-top: 20%;
+    margin-bottom: 15px;
+}
+#titulologin{
+    display: flex;
+    justify-content: center;
+}
+.botonlogin, .botonusuarios{
+    margin-left: 5px;
+    height: 70%;
+}
+.registrop{
+    text-align: center;
+}
+.botonlogin:hover, .registrarse:hover{
+    color:crimson;
+}
+.userpage{
+    display:flex;
+}
+.inputid{
+    width: 15px;
+}
+.coment, .borrarComent, .comentp{
+    text-align: center;
+    justify-content: center;
+    
+}
+.borrarComent{
+    margin-left: 48%;
+    margin-right: 48%
+}
+.coment{
+    color: yellow;
+}

@@ -18,7 +18,9 @@ document.addEventListener('DOMContentLoaded', (e) =>{
         let div = document.querySelector('.comentarios');
         div.innerHTML = '';
         if(res){
-            res.forEach(comentario=>{div.innerHTML+=`<p class="coment">${comentario.contenido}</p>
+            res.forEach(comentario=>{div.innerHTML+=`<p class="comentp">Reseña</p>
+                                                    <p class="coment">${comentario.contenido}</p>
+                                                    <p class="comentp">Puntuacion</p>
                                                     <p class ="coment">${comentario.calificacion}</p>`
                                                     if(document.querySelector('body').dataset.admin == 1){
                                                         div.innerHTML+=`<button type="button" class="borrarComent" name="${comentario.id_comentario}">Borrar</button>`
